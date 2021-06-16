@@ -1,0 +1,68 @@
+// Media queries
+@media (max-width: 1100px) {
+  // Main
+  .landing h1, .upcoming h1, .archive h1 {
+    font-size: 3em;
+    transition: all 1s ease;
+  }
+  .landing main {
+    margin: 10vh 0;
+    button {
+      padding: 1em 2em;
+    }
+  }
+
+  // Nav
+  .nav-mid, .nav-right {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  // Logs
+  .logs {
+    grid-template-columns: 70%;
+    gap: 3rem 5%;
+  }
+
+  // Mission file
+  .file-name {
+    font-size: 5rem;
+  }
+  .rocket-stats {
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  // Main
+  .landing h1, .upcoming h1, .archive h1 {
+    font-size: 2.2em;
+    transition: all 1s ease;
+  }
+
+  // Mission file
+  .file {
+    margin: 5rem 0 5rem 0;
+  }
+  .file-name {
+    font-size: 4rem;
+  }
+  .rocket-stats-container {
+    padding: 1rem;
+  }
+  .rocket-stats {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  // Utilities
+}

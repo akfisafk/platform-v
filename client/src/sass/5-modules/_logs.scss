@@ -1,0 +1,43 @@
+// Logs
+.logs {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 42% 42%;
+  margin: 5em 0;
+  gap: 3rem 5%;
+  .log {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(18, 24, 31, .75);
+    border: 1px solid transparent;
+    border-radius: 1%;
+    height: 15vw;
+    min-height: 15em;
+    color: white;
+    transition: all .6s ease;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $textColor;
+      transition: all .6s ease;
+    }
+    .log__name {
+      font-size: 2em;
+      text-align: center;
+    }
+    .badges {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 3em;
+    }
+    .badge {
+      margin: 0 1vw 0 0;
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+}

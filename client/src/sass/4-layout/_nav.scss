@@ -1,0 +1,105 @@
+// Nav
+.nav {
+  height: 7rem;
+  margin: 0 2rem;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  z-index: 100;
+}
+
+.hidden-nav {
+  display: none;
+  height: 7rem;
+  margin: 0 2rem;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.nav-left, .nav-mid, .nav-right {
+  display: flex;
+  align-items: center;
+  margin: 0 1em;
+  li:not(:first-child) a {
+    margin-left: 9rem;
+  }
+  li a {
+    color: $textColor;
+    padding: 0 0 .5em 0;
+    background: linear-gradient(0.25turn, #c1cfe6, $textColor, #e6cab0)
+    var(--p, 0) 100% / var(--d, 0) 2px
+    no-repeat;
+
+    transition: .2s ease-out, background-position 0s 0.2s;
+    &:hover {
+      --d: 100%;
+      --p: 99%;
+    }
+  }
+}
+
+.nav-left {
+  font-family: $accentFontFamily;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-hamburger {
+  position: relative;
+  right: 0;
+  display: none;
+  align-self: center;
+  height: 35px;
+  width: 35px;
+}
+
+.hamburger {
+  display: block;
+  &:hover {
+    cursor: pointer;
+  }
+  .line {
+    height: 1px;
+    width: 2em;
+    margin: .4em 0;
+    background-color: $textColor;
+  }
+}
+
+.close-hamburger {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  &:hover {
+    cursor: pointer;
+  }
+  .line {
+    position: absolute;
+    height: 1px;
+    width: 2em;
+    margin: .4em 0;
+    background-color: $textColor;
+    transform: rotateY(0deg) rotate(45deg);
+  }
+  .line:nth-of-type(1) {
+    transform: rotateY(0deg) rotate(-45deg)
+  }
+}

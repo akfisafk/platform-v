@@ -1,0 +1,55 @@
+// Mission file
+.file {
+  color: $activeTextColor;
+  margin: 5rem auto 10rem auto;
+  width: 80vw;
+}
+
+.file-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 5rem 0;
+}
+
+.file-name {
+  font-size: 6rem;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $activeTextColor;
+}
+
+.file-content {
+  font-family: $accentFontFamily;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.file-tab {
+  background-color: #2e3135;
+  padding: 0 1rem 0 .3rem;
+  font-size: 1.2rem;
+  width: 8rem;
+  border: 1px solid #616363;
+  border-bottom: none;
+  cursor: pointer;
+  &:not(:first-child) {
+    border-left: none;
+  }
+}
+
+.file-tab-active {
+  background-color: #111116;
+  padding: 0 1rem 0 .3rem;
+  font-size: 1.2rem;
+  width: 8rem;
+  border: 1px solid #616363;
+  border-bottom: none;
+  cursor: pointer;
+  &:not(:first-child) {
+    border-left: none;
+  }
+}
+
+.MuiPaper-root {
+  background-color: transparent !important;
+}

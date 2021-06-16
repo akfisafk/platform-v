@@ -1,0 +1,33 @@
+// Badges
+.badges {
+  display: flex;
+}
+
+.badge {
+  height: 3vw;
+  width: 3vw;
+}
+
+.badge-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  bottom: 2.2rem;
+  border-radius: 6px;
+  min-width: 15rem;
+  padding: .5rem .5rem;
+  background-color: black;
+  color: $textColor;
+  text-align: center;
+}
+
+.badge-container:hover .tooltip {
+  display: block;
+}

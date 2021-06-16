@@ -1,0 +1,77 @@
+// Landing page
+.landing, .upcoming, .archive {
+    position: fixed;
+    overflow-y: auto;
+    padding: 8rem 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../images/spacex-background-dark.png');
+    background-position: 69% 77%;
+    filter: grayscale(52%);
+    transform: translateX(100vw);
+    h1 {
+      color: $textColor;
+      font-family: $secondaryFontFamily;
+      font-weight: $semiboldFontWeight;
+      font-size: 5.8em;
+      font-style: normal;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px rgb(39, 36, 39);
+    }
+}
+
+.upcoming {
+  background-position: 25% 12%;
+  filter: grayscale(22%) brightness(1.2);
+}
+
+.archive {
+  background-image: url('../../images/spacex-archive-launches-dark.png');
+  background-position: 20% 77%;
+  filter: grayscale(50%);
+}
+
+.landing main, .upcoming main, .archive main {
+  margin: 15rem 0;
+  p {
+    font-family: $accentFontFamily;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  button {
+    color: black;
+    background: linear-gradient(0.25turn, #a5b4ce, $textColor, #ccaf94);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid $textColor;
+    margin: 2.5em .8em;
+    padding: 1.4em 2.5em;
+    transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  button:hover {
+    color: $textColor;
+    background: transparent;
+    transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  button:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+    z-index: -1
+  }
+  button:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    content: '';
+    color: $textColor;
+    background: linear-gradient(0.25turn, #2a3d5a, rgb(31, 32, 37), #a57140);
+    transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}

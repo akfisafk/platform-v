@@ -1,0 +1,43 @@
+// Crew info
+.crew {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    background-color: #111116;
+}
+
+.crew-info-container {
+    padding: 2rem;
+}
+
+.crew-name {
+    font-size: 4rem;
+    margin: -1rem 0;
+}
+
+.crew-members {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 5%;
+    margin: 3rem 0;
+    text-align: center;
+
+    h3 {
+        font-size: 1.5rem; 
+    }
+    p {
+        font-size: 4rem;
+        background-color: #010203;
+        border-top: 1px solid $activeTextColor;
+        border-radius: 1rem;
+        padding: 2rem 0;
+    }
+}
+
+.crew-member-portrait {
+  width: 100%
+}
+
+.crew-member-name {
+  color: $activeTextColor;
+}
