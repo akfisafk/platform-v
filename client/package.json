@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start -w",
-    "build": "react-scripts build",
+    "build": "tsc --build && react-scripts build && --save-dev @types/react-router-dom",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
