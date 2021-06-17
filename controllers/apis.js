@@ -1,24 +1,110 @@
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
-import axios from 'axios';
+// import dotenv from 'dotenv';
+// import fetch from 'node-fetch';
+// import axios from 'axios';
+// dotenv.config();
+
+const dotenv = require('dotenv');
+const fetch = require('node-fetch');
+const axios = require('axios');
 dotenv.config();
 
-export const upcoming = async (req, res) => {
+// export const upcoming = async (req, res) => {
+//     let data = await getUpcomingLaunches();
+//     res.send(data);
+// }
+
+// export const archive = async (req, res) => {
+//     let data = await getPastLaunches();
+//     res.send(data);
+// }
+
+// export const launchData = async (req, res) => {
+//     let data = await getOneLaunch();
+//     res.send(data);
+// }
+
+// export const getOneLaunch = async (req, res) => {
+//     const { id } = req.body;
+//     let data = ''
+//     if (id) {
+//         await axios.get(`https://api.spacexdata.com/v4/launches/${id}`)
+//             .then(response => {
+//                 data = response.data;
+//                 // console.log(data);
+//                 res.send(data);
+//             })
+//             .catch(error => {
+//                 console.log(error.response);
+//             })
+//     } else return
+// }
+
+// export const getOneRocket = async (req, res) => {
+//     const { rocketId } = req.body;
+//     let data = ''
+//     if (rocketId) {
+//         await axios.get(`https://api.spacexdata.com/v4/rockets/${rocketId}`)
+//             .then(response => {
+//                 data = response.data;
+//                 // console.log(data);
+//                 res.send(data);
+//             })
+//             .catch(error => {
+//                 console.log(error.response);
+//             })
+//     } else return
+// }
+
+// export const getOneCrew = async (req, res) => {
+//     console.log('Accessing crew')
+//     const { id } = req.body;
+//     let data = ''
+//     if (id) {
+//         await axios.get(`https://api.spacexdata.com/v4/crew/${id}`)
+//             .then(response => {
+//                 data = response.data;
+//                 console.log(data);
+//                 res.send(data);
+//             })
+//             .catch(error => {
+//                 console.log(error.response);
+//             })
+//     } else return
+// }
+
+// export const getOneCapsule = async (req, res) => {
+//     console.log('Accessing capsule')
+//     const { id } = req.body;
+//     let data = ''
+//     if (id) {
+//         await axios.get(`https://api.spacexdata.com/v4/capsules/${id}`)
+//             .then(response => {
+//                 data = response.data;
+//                 console.log(data);
+//                 res.send(data);
+//             })
+//             .catch(error => {
+//                 console.log(error.response);
+//             })
+//     } else return
+// }
+
+module.exports.upcoming = async (req, res) => {
     let data = await getUpcomingLaunches();
     res.send(data);
 }
 
-export const archive = async (req, res) => {
+module.exports.archive = async (req, res) => {
     let data = await getPastLaunches();
     res.send(data);
 }
 
-export const launchData = async (req, res) => {
+module.exports.launchData = async (req, res) => {
     let data = await getOneLaunch();
     res.send(data);
 }
 
-export const getOneLaunch = async (req, res) => {
+module.exports.getOneLaunch = async (req, res) => {
     const { id } = req.body;
     let data = ''
     if (id) {
@@ -34,7 +120,7 @@ export const getOneLaunch = async (req, res) => {
     } else return
 }
 
-export const getOneRocket = async (req, res) => {
+module.exports.getOneRocket = async (req, res) => {
     const { rocketId } = req.body;
     let data = ''
     if (rocketId) {
@@ -50,7 +136,7 @@ export const getOneRocket = async (req, res) => {
     } else return
 }
 
-export const getOneCrew = async (req, res) => {
+module.exports.getOneCrew = async (req, res) => {
     console.log('Accessing crew')
     const { id } = req.body;
     let data = ''
@@ -67,7 +153,7 @@ export const getOneCrew = async (req, res) => {
     } else return
 }
 
-export const getOneCapsule = async (req, res) => {
+module.exports.getOneCapsule = async (req, res) => {
     console.log('Accessing capsule')
     const { id } = req.body;
     let data = ''
@@ -97,3 +183,4 @@ async function getPastLaunches() {
     const data = await response.json();
     return data;
 }
+

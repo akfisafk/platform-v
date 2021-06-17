@@ -1,8 +1,15 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import apisRouter from "./routes/apis.js";
-import dotenv from 'dotenv';
+// import express from 'express';
+// import bodyParser from 'body-parser';
+// import cors from 'cors';
+// import apisRouter from "./routes/apis.js";
+// import dotenv from 'dotenv';
+// dotenv.config();
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const apisRouter = require('./routes/apis');
+const dotenv = require('dotenv');
 dotenv.config();
 
 // INITIALIZE APP AND IMPORTANT VARIABLES
